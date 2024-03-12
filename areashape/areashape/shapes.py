@@ -63,9 +63,20 @@ class Triangle(Shape):
         s = (self.lengths[0] + self.lengths[1] + self.lengths[2]) / 2
         return np.sqrt(s * (s - self.lengths[0]) * (s - self.lengths[1]) * (s - self.lengths[2]))
     
+    @staticmethod
+    def area_by_sides(*args):
+        if len(args) != 3 or not all(isinstance(x, (int, float)) and x > 0 for x in args):
+            raise TypeError('Must be 3 int or float > 0')
+        l1, l2, l3 = args
+        print(l1, l2, l3)
+        s = (l1 + l2 + l3) / 2
+        return np.sqrt(s * (s - l1) * (s - l2) * (s - l3))
+    
     def __setattr__(self, name, value):
         if name in ['vertexes']:
             super().__setattr__(name, value)
             self.update_attributes()
         else:
             super().__setattr__(name, value)
+            
+    

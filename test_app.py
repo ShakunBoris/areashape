@@ -15,7 +15,7 @@ import tests
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
-
+print(ash.Triangle.area_by_sides(3,4, 5))
 c = ash.Circle(3)
 t = ash.Triangle((2,1), (3,6), (6,2))
 print(f'Circle: calculate_area(Shape): {ash.calculate_area(c)}')
