@@ -25,6 +25,7 @@ Here is an example of how to use the library to calculate the area of a triangle
 
 import areashape as ash
 
+print(ash.Triangle.area_by_sides(3,4, 5))
 t = ash.Triangle((2,1), (3,6), (6,2))
 c = ash.Circle(4)
 print(ash.calculate_area(t))
